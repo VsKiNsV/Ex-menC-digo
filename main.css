@@ -1,164 +1,98 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     overflow-x: hidden;
 }
 
-h1{
-    color: white;
-    font-size: 2rem;
-    margin-top: 0.4rem;
+p {
+    font-size: 1.5rem;
 }
 
-h2{
-    color: white;
-    margin-top: 19rem;
-    font-size: 2rem;
+.descripcion {
+    display: flex;
 }
 
-h3{
-    color: white;
-    font-size: 3rem;
-    margin-top: -1.6rem;
-}
-
-h4{
-    color:white;
-    margin-top: -2rem;
-    margin-left: 84rem;
-}
-
-div{
-    height: 100px;
-}
-#Fondo {
+.fotos1 {
     background-image: url("Fondo.jpg");
-    width: 100%; 
-    height: 528px;
-    padding: 20px;
+    width: 100%;
+    height: 650px;
+    padding: 2rem;
     margin-top: 0rem;
     position: relative;
-    background-size: contain;
+    background-size: cover;
     background-position: center;
-    background-repeat:unset; 
+    background-repeat: no-repeat;
+    display: flex;
 }
 
-#Primera{
-    margin-top: 4rem;
-    margin-left: 11rem;
+.portada_info {
+    width: max-content;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: left;
+    text-align: left;
 }
 
-#Primera h1 {
-    color: black;
-    font-size: 3rem;
-    text-shadow: 0.1em 0em #aeaeb1;
+.portada_info h1 {
+    font-size: 2.2rem;
 }
 
-#Segunda h2{
-    color: black;
-    font-size: 1.4rem;
-    font-style:oblique;
+.fondo {
+    color: white;
 }
 
-#Segunda{
-    margin-left: 58rem;
-    margin-top: -25rem;
-}
-
-
-
-#Tercera{
-    background-color: #E0E0EB;
-    height: 1rem;
-}
-
-
-/* Segundo Bloque */ 
-
-
-#Cuarta h1{
-    color: black;
-    margin-top:20rem;
-    margin-left: 11rem;
-    font-size: 2.9rem;
-    text-shadow: 0.1em 0em #aeaeb1;
-}
-
-#Quinta{
-    background-image: url("Llacao.jpg");
-    width: 150%; 
-    height: 425px;
-    padding: 20px;
+.fondo .descripcion {
     position: relative;
-    background-size: contain;
-    background-position: center;
-    background-repeat:no-repeat;
-    margin-top: -20rem; 
-    display: block;
-}
-
-#Quinta:hover{
-    filter: blur(1.5px) invert(10%);
-    transition:all .5s ease-in-out;
-}
-
-.box {
-    width: 400px;
-    height: 100px;
     text-align: center;
-    margin: 50px auto;
-} 
-
-.to_bottom {
-    width: 0;
-    height: 0;
-    border-top: 30px solid black;
-    border-left: 30px solid transparent;
-    border-right: 30px solid transparent;
-    margin-top: 2rem;
-    margin-left: 11rem;
+    display: inline-block;
+    width: 100vw;
 }
 
-#Séptima h2{
-    color: black;
-    margin-left: 20rem;
-    margin-top: 1.5rem;
-    font-size: 1.4rem;
-    font-style:oblique;
+.seccion {
+    padding-block: 4rem;
 }
 
-#linea{
-    background-color: #E0E0EB;
-    height: 1rem;
-    margin-top: 5rem;
+.seccion .contenedor-seccion {
+    max-width: 46rem;
+    margin-inline: auto;
+    display: flex;
+    align-items: center;
 }
 
-#Sexta h1{
-    color:black; 
-    margin-left: 43.5rem;
-    margin-top: 6rem;
-    font-size: 3rem;
-    font-style: oblique;
-    text-shadow: 0.1em 0em #aeaeb1;
+.seccion .contenedor-seccion img {
+    width: 100%;
+    gap: 2rem;
 }
 
-#Personaje1 {
-    background-image: url("basurero1.png");
-    width: 150%; 
-    height: 175px;
-    padding: 30px;
-    position: relative;
-    background-size: contain;
-    background-position: center;
-    background-repeat:no-repeat;
-    margin-top: -9rem; 
-    display: block;
-    margin-left: -2rem;
+.seccion .contenedor-seccion>* {
+    flex-basis: 100%;
+    flex-shrink: 1;
+    flex-grow: 1;
 }
 
-/* TARJETAS */ 
+.descripcion p {
+    padding: 2rem;
+    margin: auto;
+    padding-inline: 3rem;
+}
 
-.container{
+.tarjetas {
+    background-color: rgb(75, 74, 74);
+}
+
+.tarjetas p {
+    color: white
+}
+
+.contenedor {
     width: 100%;
     max-width: 1200px;
     height: 430px;
@@ -169,264 +103,198 @@ div{
     margin-top: 5rem;
 }
 
-.container .card{
+.contenedor-seccion .card {
     width: 330px;
     height: 430px;
     border-radius: 8px;
-    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 5px 5px rgba(161, 161, 161, 0.2);
     overflow: hidden;
     margin: 20px;
     text-align: center;
     transition: all 0.25s;
 }
 
-.container .card:hover{
+.contenedor-seccion .card:hover {
     transform: translateY(-15px);
-    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 12px 16px rgba(223, 220, 220, 0.2);
 }
 
-.container .card img{
+.contenedor-seccion .card img {
     width: 330px;
     height: 220px;
 }
 
-
-.container .card h4{
-    font-weight: 600;
+.titulo {
+    font-size: 2rem;
+    padding-left: -20rem;
 }
 
-#Octava h2{
-    font-size: 1.6rem;
-    color: black;
-    margin-left: 22rem;
-    margin-top: 3rem;
+.problematica {
+    background-color: rgb(75, 74, 74);
 }
 
-#Mapeo{
-    background-image: url("convocatoria.jpg");
-    width: 100%; 
-    height: 525px;
-    padding: 30px;
-    position: relative;
-    background-size: contain;
-    background-position: center;
-    background-repeat:no-repeat;
-    margin-top: 5rem;
+.problematica p {
+    color: white;
 }
 
-#linea2 {
-    background-color: #E0E0EB;
-    height: 1rem;
-    margin-top: 5rem;
+.problematica h1 {
+    color: white;
 }
 
-#Novena h2{
-    color:black; 
-    margin-left: 42rem;
-    margin-top: 6rem;
-    font-size: 3rem;
-    font-style: oblique;
-    text-shadow: 0.1em 0em #aeaeb1;
+.contenedor-seccion {
+    display: flex;
+    align-items: center;
 }
 
-#Décima h2{
-    color:#000000; 
-    margin-left: 20rem;
-    margin-top: 4rem;
-    font-size: 1.5rem;
-    font-weight:bolder;
-    
+#convocatoria {
+    padding: 0;
 }
 
-#Once h3{
-    color:rgb(97, 96, 96);
-    margin-left: 40rem;
-    margin-top: -6.2rem;
-    font-size: 1.5rem;
-    font-weight:bolder
-
+#convocatoria2 img {
+    width: 75%;
+    height: 75%;
+    padding-left: 28rem;
 }
 
-#Verde{
-    background-image: url("RECICLAJE.png");
-    width: 150%; 
-    height: 350px;
-    padding: 30px;
-    position: relative;
-    background-size: contain;
-    background-position: center;
-    background-repeat:no-repeat;
-    margin-top: -12rem;
-    margin-left: 7rem;
+.prototipo {
+    background-color: rgb(75, 74, 74);
 }
 
-#linea3 {
-    background-color: #E0E0EB;
-    height: 1rem;
-    margin-top: 8rem;
+.prototipo h1 {
+    color: white;
 }
 
-#Doce h2{
-    color:black; 
-    margin-left: 25rem;
-    margin-top: 3rem;
-    font-size: 3rem;
-    font-style: oblique;
-    text-shadow: 0.1em 0em #aeaeb1;
+.prototipo p {
+    color: white;
 }
 
-#Foto1{
-    background-image: url("WhatsApp\ Image\ 2022-01-17\ at\ 9.54.04\ AM.jpeg");
-    width: 150%; 
-    height: 350px;
-    padding: 30px;
-    position: relative;
-    background-size: contain;
-    background-position: center;
-    background-repeat:no-repeat;
-    margin-top: 5rem;
+.titulo {
+    display: flex;
+    padding-left: -10rem;
 }
 
-#Foto2{
-    background-image: url("WhatsApp\ Image\ 2022-01-17\ at\ 9.54.06\ AM.jpeg");
-    width: 40%; 
-    height: 350px;
-    padding: 30px;
-    position: relative;
-    background-size: contain;
-    background-position: center;
-    background-repeat:no-repeat;
+.entrevistas img {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
 }
 
-#Trece h2{
-    color:#000000; 
-    margin-left: 5rem;
-    margin-top: -40rem;
-    font-size: 1.5rem;
-    font-weight:bolder;
+.tarjetas img {
+    display: flex;
+    width: 100%;
+    align-items: center;
 }
 
-#Catorce h2{
-    color:#000000; 
-    margin-left: 55rem;
-    margin-top: 20rem;
-    font-size: 1.5rem;
-    font-weight:bolder;
+.descripcion {
+    display: flex;
+    flex-direction: row;
+    align-items: left;
+    justify-content: left;
 }
 
-#Foto1:hover{
-    filter: blur(1.5px) invert(10%);
-    transition:all .5s ease-in-out;
+#entrevista img {
+    display: flex;
+    flex-direction: column;
+    margin: 2rem 0;
+    width: 100%;
 }
 
-#Foto2:hover{
-    filter: blur(1.5px) invert(10%);
-    transition:all .5s ease-in-out;
+.contenedor-seccion .entrevista2 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    height: 100%;
+    width: 100%;
+    margin: -5rem;
+    margin-left: 1rem;
 }
 
-#linea4{
-    background-color: #E0E0EB;
-    height: 1rem;
-    margin-top: 12rem;
+.mapeo {
+    background-color: rgb(150, 148, 148);
+    color: white;
 }
 
-#Prototipo h2{
-    color:black; 
-    margin-left: 42rem;
-    margin-top: 4rem;
-    font-size: 3rem;
-    font-style: oblique;
-    text-shadow: 0.1em 0em #aeaeb1;
-}
-
-#Último h2{
-    color:#000000; 
-    margin-left: 55rem;
-    margin-top: 5rem;
-    font-size: 1.6rem;
-    font-weight:bolder;
-
-}
-
-#Amarillo{ 
-    background-image: url("basurero\ 2_1.png");
-    width: 45%; 
-    height: 150px;
-    padding: 100px;
-    position: relative;
-    background-size: contain;
-    background-position: center;
-    background-repeat:no-repeat;
-    margin-top: -9rem;
-}
-
-#linea5{
-    background-color: #E0E0EB;
-    height: 3rem;
-    margin-top: 12rem;
-}
-
-#dos{
-
-}
-
-                        /* M E D I A - Q U E R I E S ( FALTA EDITAR) */
-
-
-
-@media screen and ( min-width: 40rem) {
-   
-    body{
-        overflow-x: hidden;
-        width: 100vw;
+.mapeo @media screen and (max-width: 640px) {
+    p {
+        font-size: 1rem;
     }
-
-    .uno{
-    overflow-x: hidden;
-    width: 100vw;
-    font-size: small;
-}
-
-    .dos{
-        width: 100vw;
-        text-align: left;
+    .titulo {
+        font-size: 1.5rem;
     }
-
-    .tres{
-        overflow-x: hidden;
-        justify-content: left;
-        align-items: center;
-        
-    }
-
-    .cuatro{
-        width: max-content;
-        height: auto;
-        display: flex;
-        justify-content: center;
-        align-self: center;
-        overflow: hidden;
-    }
-    .cinco{
+    .seccion .contenedor-seccion {
         display: flex;
         justify-content: center;
     }
-}
-
-@media screen and (min-width: 464px) {
-    .uno{
+    .seccion .contenedor-seccion img {
+        width: 75%;
+        gap: 2rem;
+        display: flex;
+        justify-content: center;
+    }
+    #tomate img {
+        width: 50%;
+    }
+    .fotos {
+        display: flex;
+        justify-content: center;
+    }
+    /*
+    #convocatoria {
+        display: flex;
+        justify-content: center;
+    }
+    */
+    #convocatoria img {
+        width: 100%;
+    }
+    #convocatoria2 img {
+        width: 120%;
+        padding: 10rem;
+    }
+    #entrevista img {
+        display: flex;
         flex-direction: column;
-        width:80%;
+        margin: 2rem 0;
     }
-    .uno{
-        width: 100vw;
+    .seccion .contenedor-seccion {
+        flex-wrap: wrap;
+    }
+    .contenedor-seccion .card img {
+        width: 100%;
+        height: 100%;
+        margin-bottom: 2rem;
+    }
+    .fotos {
+        display: flex;
+        justify-content: center;
+    }
+    #llacao {
+        display: flex;
+        justify-content: center;
+    }
+    .card {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+    .descripcion {
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        justify-content: left;
+    }
+    .prototipo {
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        justify-content: left;
+    }
+    .seccion .contenedor-seccion {
+        max-width: 100%;
+        display: flex;
+        align-items: left;
+        justify-content: left;
     }
 }
-
-
-
-
-
-
-
-
