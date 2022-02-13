@@ -65,12 +65,16 @@ div{
     margin-top: -25rem;
 }
 
-/* Segundo Bloque */ 
+
 
 #Tercera{
     background-color: #E0E0EB;
     height: 1rem;
 }
+
+
+/* Segundo Bloque */ 
+
 
 #Cuarta h1{
     color: black;
@@ -362,27 +366,40 @@ div{
     margin-top: 12rem;
 }
 
-/* M E D I A - Q U E R I E S ( FALTA EDITAR) */
+#dos{
+
+}
+
+                        /* M E D I A - Q U E R I E S ( FALTA EDITAR) */
+
+
 
 @media screen and ( min-width: 40rem) {
+   
     body{
         overflow-x: hidden;
+        width: 100vw;
     }
 
-    #uno{
+    .uno{
     overflow-x: hidden;
-    height:max-content;
-    justify-content: center;
-    align-items: center;
+    width: 100vw;
+    font-size: small;
 }
-    #tres{
+
+    .dos{
+        width: 100vw;
+        text-align: left;
+    }
+
+    .tres{
         overflow-x: hidden;
         justify-content: left;
         align-items: center;
         
     }
 
-    .uno{
+    .cuatro{
         width: max-content;
         height: auto;
         display: flex;
@@ -390,7 +407,7 @@ div{
         align-self: center;
         overflow: hidden;
     }
-    .dos{
+    .cinco{
         display: flex;
         justify-content: center;
     }
@@ -401,10 +418,11 @@ div{
         flex-direction: column;
         width:80%;
     }
-    #plans{
+    .uno{
         width: 100vw;
     }
 }
+
 
 
 
